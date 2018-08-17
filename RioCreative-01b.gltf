@@ -1,0 +1,196 @@
+{
+    "accessors" : [
+        {
+            "bufferView" : 0,
+            "componentType" : 5123,
+            "count" : 16500,
+            "max" : [
+                13702
+            ],
+            "min" : [
+                0
+            ],
+            "type" : "SCALAR"
+        },
+        {
+            "bufferView" : 1,
+            "componentType" : 5126,
+            "count" : 13703,
+            "max" : [
+                0.05788496136665344,
+                0.0,
+                0.080227792263031
+            ],
+            "min" : [
+                0.010131608694791794,
+                -0.0020000000949949026,
+                0.07234123349189758
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 2,
+            "componentType" : 5126,
+            "count" : 13703,
+            "max" : [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "min" : [
+                -1.0,
+                -1.0,
+                -1.0
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 3,
+            "componentType" : 5126,
+            "count" : 13703,
+            "max" : [
+                1.0,
+                0.9885098934173584,
+                1.0,
+                1.0
+            ],
+            "min" : [
+                -1.0,
+                -0.9968005418777466,
+                -1.0,
+                1.0
+            ],
+            "type" : "VEC4"
+        },
+        {
+            "bufferView" : 4,
+            "componentType" : 5126,
+            "count" : 13703,
+            "max" : [
+                0.933815062046051,
+                0.49444371461868286
+            ],
+            "min" : [
+                0.9119094014167786,
+                0.4725380539894104
+            ],
+            "type" : "VEC2"
+        }
+    ],
+    "asset" : {
+        "generator" : "Khronos Blender glTF 2.0 exporter",
+        "version" : "2.0"
+    },
+    "bufferViews" : [
+        {
+            "buffer" : 0,
+            "byteLength" : 33000,
+            "byteOffset" : 0,
+            "target" : 34963
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 164436,
+            "byteOffset" : 33000,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 164436,
+            "byteOffset" : 197436,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 219248,
+            "byteOffset" : 361872,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 109624,
+            "byteOffset" : 581120,
+            "target" : 34962
+        }
+    ],
+    "buffers" : [
+        {
+            "byteLength" : 690744,
+            "uri" : "RioCreative-01b.bin"
+        }
+    ],
+    "images" : [
+        {
+            "name" : "Rio-COLORS",
+            "uri" : "Rio-COLORS.jpg"
+        }
+    ],
+    "materials" : [
+        {
+            "name" : "RioTexture",
+            "pbrMetallicRoughness" : {
+                "baseColorFactor" : [
+                    0.6400000190734865,
+                    0.6400000190734865,
+                    0.6400000190734865,
+                    1.0
+                ],
+                "baseColorTexture" : {
+                    "index" : 0
+                },
+                "metallicFactor" : 0.0
+            }
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "CUCurve.007",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "NORMAL" : 2,
+                        "POSITION" : 1,
+                        "TANGENT" : 3,
+                        "TEXCOORD_0" : 4
+                    },
+                    "indices" : 0,
+                    "material" : 0
+                }
+            ]
+        }
+    ],
+    "nodes" : [
+        {
+            "mesh" : 0,
+            "name" : "Creative",
+            "scale" : [
+                37.3834342956543,
+                37.3834342956543,
+                37.3834342956543
+            ],
+            "translation" : [
+                0.0,
+                -0.05060397461056709,
+                -0.0
+            ]
+        }
+    ],
+    "samplers" : [
+        {}
+    ],
+    "scene" : 0,
+    "scenes" : [
+        {
+            "name" : "Scene",
+            "nodes" : [
+                0
+            ]
+        }
+    ],
+    "textures" : [
+        {
+            "sampler" : 0,
+            "source" : 0
+        }
+    ]
+}

@@ -1,0 +1,202 @@
+{
+    "accessors" : [
+        {
+            "bufferView" : 0,
+            "componentType" : 5123,
+            "count" : 1704,
+            "max" : [
+                1143
+            ],
+            "min" : [
+                0
+            ],
+            "type" : "SCALAR"
+        },
+        {
+            "bufferView" : 1,
+            "componentType" : 5126,
+            "count" : 1144,
+            "max" : [
+                0.9999994039535522,
+                1.0070383548736572,
+                0.9999989867210388
+            ],
+            "min" : [
+                -0.999999463558197,
+                -1.0070383548736572,
+                -0.9999996423721313
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 2,
+            "componentType" : 5126,
+            "count" : 1144,
+            "max" : [
+                0.9831057786941528,
+                0.9874070882797241,
+                0.9831056594848633
+            ],
+            "min" : [
+                -0.9831056594848633,
+                -0.9874071478843689,
+                -0.9831057786941528
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 3,
+            "componentType" : 5126,
+            "count" : 1144,
+            "max" : [
+                0.9951813220977783,
+                0.1577957272529602,
+                0.9985764026641846,
+                1.0
+            ],
+            "min" : [
+                -0.9973949193954468,
+                -0.1577955037355423,
+                -0.998576283454895,
+                1.0
+            ],
+            "type" : "VEC4"
+        },
+        {
+            "bufferView" : 4,
+            "componentType" : 5126,
+            "count" : 1144,
+            "max" : [
+                1.0000001192092896,
+                0.9999979119602358
+            ],
+            "min" : [
+                0.0,
+                2.0265579223632812e-06
+            ],
+            "type" : "VEC2"
+        }
+    ],
+    "asset" : {
+        "generator" : "Khronos Blender glTF 2.0 exporter",
+        "version" : "2.0"
+    },
+    "bufferViews" : [
+        {
+            "buffer" : 0,
+            "byteLength" : 3408,
+            "byteOffset" : 0,
+            "target" : 34963
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 13728,
+            "byteOffset" : 3408,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 13728,
+            "byteOffset" : 17136,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 18304,
+            "byteOffset" : 30864,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 9152,
+            "byteOffset" : 49168,
+            "target" : 34962
+        }
+    ],
+    "buffers" : [
+        {
+            "byteLength" : 58320,
+            "uri" : "RioCreative-01c.bin"
+        }
+    ],
+    "images" : [
+        {
+            "name" : "1_earth_1k.jpg",
+            "uri" : "1_earth_1k.jpg.jpg"
+        }
+    ],
+    "materials" : [
+        {
+            "name" : "EarthMat",
+            "pbrMetallicRoughness" : {
+                "baseColorFactor" : [
+                    0.6400000190734865,
+                    0.6400000190734865,
+                    0.6400000190734865,
+                    1.0
+                ],
+                "baseColorTexture" : {
+                    "index" : 0
+                },
+                "metallicFactor" : 0.0
+            }
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "Sphere",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "NORMAL" : 2,
+                        "POSITION" : 1,
+                        "TANGENT" : 3,
+                        "TEXCOORD_0" : 4
+                    },
+                    "indices" : 0,
+                    "material" : 0
+                }
+            ]
+        }
+    ],
+    "nodes" : [
+        {
+            "mesh" : 0,
+            "name" : "Earth",
+            "rotation" : [
+                -0.42697131633758545,
+                -0.5636448860168457,
+                0.5636448860168457,
+                0.42697128653526306
+            ],
+            "scale" : [
+                0.1143561452627182,
+                0.1143561452627182,
+                0.1143561452627182
+            ],
+            "translation" : [
+                1.3060963153839111,
+                -0.09630230069160461,
+                0.4820592999458313
+            ]
+        }
+    ],
+    "samplers" : [
+        {}
+    ],
+    "scene" : 0,
+    "scenes" : [
+        {
+            "name" : "Scene",
+            "nodes" : [
+                0
+            ]
+        }
+    ],
+    "textures" : [
+        {
+            "sampler" : 0,
+            "source" : 0
+        }
+    ]
+}
