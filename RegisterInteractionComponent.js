@@ -1,12 +1,12 @@
 // register our component
-AFRAME.registerComponent('SMVmodel', {
+AFRAME.registerComponent('markerhandler1', {
 
     init: function() {
-        const animatedSMV = document.querySelector("#animated-SMV");
+        const animatedMarker1 = document.querySelector("#animated-marker1");
 
-        animatedSMV.addEventListener('click', function(ev){
-            if (animatedSMV.object3D.visible == true && ev.detail.cursorEl) {
-                const entity = document.querySelector('#animated-SMV');
+        animatedMarker1.addEventListener('click', function(ev){
+            if (animatedMarker1.object3D.visible == true && ev.detail.cursorEl) {
+                const entity = document.querySelector('#animated-model1');
                 const scale = entity.getAttribute('scale');
                 Object.keys(scale).forEach((key) => scale[key] = scale[key] + 1);
                 
