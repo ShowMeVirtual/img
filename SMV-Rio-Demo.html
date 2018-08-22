@@ -1,0 +1,236 @@
+<html>
+<head><meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+<script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
+<script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.0/aframe/build/aframe-ar.js"></script>
+<script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
+
+</head>
+
+
+
+
+<script>
+// Register Component 1 - Suitcase
+AFRAME.registerComponent('markerhandler1', {
+
+    init: 	function() {
+        	const animatedMarker1 = document.querySelector("#animated-marker1");
+
+       				animatedMarker1.addEventListener('click', function(ev){
+                    if (animatedMarker1.object3D.visible == true && ev.detail.cursorEl) {
+                	const entity = document.querySelector('#animated-model1').emit('Tap1');
+            		}
+            		if (animatedMarker1.object3D.visible == true && ev.detail.cursorEl) {
+                	const entity = document.querySelector('#animated-model2').emit('Tap1');
+            		}
+                    if (animatedMarker1.object3D.visible == true && ev.detail.cursorEl) {
+                	const entity = document.querySelector('#animated-model3').emit('Tap1');
+            		}
+                    console.log("Tap1");
+        });
+}});
+
+// Register Component 2 - SMV Model
+AFRAME.registerComponent('markerhandler2', {
+
+    init: 	function() {
+        	const animatedMarker2 = document.querySelector("#animated-marker2");
+
+       				animatedMarker2.addEventListener('click', function(ev){
+            		if (animatedMarker2.object3D.visible == true && ev.detail.cursorEl) {
+                	const entity = document.querySelector('#animated-model2').emit('Tap2');
+            		}
+                    if (animatedMarker2.object3D.visible == true && ev.detail.cursorEl) {
+                	const entity = document.querySelector('#animated-model3').emit('Tap2');
+            		}
+                    console.log("Tap2");
+        });
+}});
+
+// Register Component 3 - Rio Model
+AFRAME.registerComponent('markerhandler3', {
+
+    init: 	function() {
+        	const animatedMarker3 = document.querySelector("#animated-marker3");
+
+        			animatedMarker3.addEventListener('click', function(ev){
+            		if (animatedMarker3.object3D.visible == true && ev.detail.cursorEl) {
+                	const entity = document.querySelector('#animated-model3').emit('Tap3');
+            		}
+                    if (animatedMarker3.object3D.visible == true && ev.detail.cursorEl) {
+                	const entity = document.querySelector('#animated-model2').emit('Tap3');
+            		}
+                    console.log("Tap3");
+        });
+}});
+</script>
+
+
+<body style='margin : 0px; overflow: hidden;'>
+<a-scene embedded arjs='trackingMethod: best; debugUIEnabled: false;' vr-mode-ui="enabled: false">
+
+
+		<!-- Assign Assets -->
+        <a-assets timeout="10000">
+        <a-asset-item id="animated-asset0" src="https://raw.githubusercontent.com/smv-gg/img/master/suitcase-bottom3.gltf"></a-asset-item>
+        <a-asset-item id="animated-asset1" src="https://raw.githubusercontent.com/smv-gg/img/master/suitcase-top3.gltf"></a-asset-item>
+    	<a-asset-item id="animated-asset2" src="https://raw.githubusercontent.com/smv-gg/img/master/SMV-MODEL-17.gltf"></a-asset-item>
+  		<a-asset-item id="animated-asset3" src="https://raw.githubusercontent.com/smv-gg/img/master/RioCreative-02.gltf"></a-asset-item>
+        </a-assets>
+		
+		
+		<!-- Lighting -->
+		<a-light color="blue" position="-1 1 0" intensity="5"></a-light>
+        <a-light color="red" position="1 0 0" intensity="5"></a-light>
+		<a-light type="ambient" color="#ffffff" intensity="2"></a-light>
+
+
+		<!-- Custom Marker -->
+		<a-marker type='pattern' url='https://raw.githubusercontent.com/smv-gg/img/master/pattern-marker-Demo.patt'>
+		<!-- Master Scale -->
+        <a-entity position='0 .3 0' rotation='0 0 0' scale='1 1 1' >		
+            
+            
+            	<!-- Suitcase PARENT -->
+                		<a-entity position='0 0 -.64' rotation='0 -90 0' scale='4 4 4'>
+                        
+						<!-- Suitcase Top -->
+                        		<a-entity							
+								gltf-model="#animated-asset0" >
+                        		</a-entity>		
+                        
+                		<!-- Suitcase Top -->
+                        		<a-entity markerhandler1 emitevents="true" cursor="rayOrigin: mouse" id="animated-marker1" >
+                    					<a-entity
+                    					id="animated-model1"
+										gltf-model="#animated-asset1" 
+                                        sound="src: url(https://cdn.glitch.com/80d275c4-f176-4d77-9524-ed0dc3fe10a5%2Fhelp3.mp3?1534875498412.mp3); on: Tap1" 
+                                		autoplay="false" loop="true" volume="0.25" >
+                                		
+                                        		<a-animation 
+                            					attribute="rotation"
+                                   				begin="Tap1"
+               									dur="1000"
+                                    			easing="ease-out-expo"
+               									fill="forward"
+               									to="0 0 118.1"
+               									repeat="0">
+                                        		</a-animation>
+                                        
+                          				</a-entity>
+                        		</a-entity>
+		
+				<!-- END Suitcase PARENT -->
+                		</a-entity>
+                        
+                        
+                <!-- SMV Model -->
+						<a-entity markerhandler2 emitevents="true" cursor="rayOrigin: mouse" id="animated-marker2">
+                    			<a-entity
+                    			id="animated-model2"
+								gltf-model="#animated-asset2"
+								position='-.3 .1 0' rotation='90 0 0' scale='.05 .05 .05' > 
+                      					
+                                        <a-animation 
+                            			attribute="rotation"
+                                    	begin="Tap1"
+               							dur="1000"
+                                    	easing="ease-out-expo"
+               							fill="forwards"
+                                        from="90 0 0"
+               							to="0 0 0"
+               							repeat="0">
+                                        </a-animation>
+										<a-animation 
+                            			attribute="position"
+                                    	begin="Tap1"
+               							dur="1000"
+                                    	easing="ease-out-expo"
+               							fill="forwards"
+                                        from="-.3 -.2 0"
+               							to="-.3 .1 0"
+               							repeat="0">
+                                        </a-animation>
+                                        
+                                        <a-animation 
+                            			attribute="rotation"
+                                   		begin="Tap2"
+                                        end="Tap3"
+               							dur="10000"
+                                    	easing="linear"
+               							fill="none"
+                                        from="0 0 0"
+               							to="0 -360 0"
+               							repeat="indefinite">
+                                        </a-animation>
+                                        
+								</a-entity>
+                    	</a-entity>
+                    
+        
+				<!-- Rio Model -->
+                    	<a-entity markerhandler3 emitevents="true" cursor="rayOrigin: mouse" id="animated-marker3">
+                    			<a-entity
+                    			id="animated-model3"
+								gltf-model="#animated-asset3"
+								position='.51 -.1 0' rotation='180 0 0' scale='.2 .2 .2' >
+                      					
+                                        <a-animation 
+                            			attribute="rotation"
+                                    	begin="Tap1"
+               							dur="1000"
+                                    	easing="ease-out-expo"
+               							fill="forwards"
+                                        from="180 0 0"
+               							to="90 0 0"
+               							repeat="0">
+                                        </a-animation>
+                                        <a-animation 
+                            			attribute="position"
+                                    	begin="Tap1"
+               							dur="1000"
+                                    	easing="ease-out-expo"
+               							fill="forwards"
+                                        from=".51 -.1 0"
+               							to=".51 .2 0"
+               							repeat="0">
+                                        </a-animation>
+                                        
+                                        <a-animation 
+                            			attribute="rotation"
+                                    	begin="Tap3"
+                                        end="Tap2"
+               							dur="10000"
+                                    	easing="linear"
+               							fill="none"
+                                        from="90 0 0"
+               							to="90 -360 0"
+               							repeat="indefinite">
+                                        </a-animation>
+                                        
+								</a-entity>
+                    	</a-entity>
+                    
+		
+        <!-- Master Scale Close -->
+        </a-entity>
+        
+		
+		<!-- Particle system uses 'default' preset, setting custom colors. -->
+		<a-entity position="0 50 0" particle-system="color: #EF0000,#44CC00" size="1" ></a-entity>
+        
+        
+		</a-marker>
+
+	
+    	<!-- Simple camera -->
+    	<a-entity camera><a-entity cursor="fuse: true; fuseTimeout: 500"
+            position="0 0 -1"
+            geometry="primitive: ring; radiusInner: 0.002; radiusOuter: 0.005"
+            material="color: orange; shader: flat"></a-entity></a-entity>
+
+</a-scene>
+</body>
+
+</html>
